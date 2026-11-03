@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ehr-dataset"
+version = "0.1.0"
+description = "Source-grounded HL7 FHIR R4 patient records from open-access case reports, extracted by an LLM (Reflection Beam by default)."
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = "MIT"
+dependencies = [
+  "httpx==0.28.1",
+  "defusedxml==0.7.1",
+  "pydantic==2.13.4",
+  "PyYAML==6.0.3",
+  "jsonschema==4.26.0",
+]
+
+[project.optional-dependencies]
+weights = ["huggingface-hub>=0.34,<2"]
+stats = ["tokenizers>=0.20,<1"]
+
+[project.scripts]
+ehr-dataset = "ehr_dataset.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ehr_dataset"]

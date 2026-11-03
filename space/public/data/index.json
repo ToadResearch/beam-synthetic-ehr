@@ -1,0 +1,2859 @@
+{
+ "articles": [
+  {
+   "id": "PMC10751923.1",
+   "title": "Primary biliary cholangitis with features of autoimmune hepatitis in a 19-year-old adolescent with 14q24.1q24.2 deletion: a case report",
+   "citation": "Front Pediatr. 2023 Dec 12;11:1280409. doi: 10.3389/fped.2023.1280409",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "19-year-old male adolescent with stage IV PBC with features of AIH and 14q24.1q24.2 deletion",
+     "bundle": "8cdac7a6-5541-5024-944e-708a6b52ec55",
+     "resources": 389,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 345,
+      "Condition": 21,
+      "MedicationStatement": 5,
+      "Procedure": 8,
+      "FamilyMemberHistory": 1,
+      "CarePlan": 4,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "primary biliary cholangitis with autoimmune hepatitis features",
+       "code": null
+      },
+      {
+       "name": "liver cirrhosis",
+       "code": "K74.69"
+      },
+      {
+       "name": "hepatocerebral degeneration",
+       "code": null
+      },
+      {
+       "name": "patent ductus arteriosus",
+       "code": "Q25.0"
+      },
+      {
+       "name": "left ectopic kidney",
+       "code": null
+      },
+      {
+       "name": "left thumb polydactyly",
+       "code": null
+      },
+      {
+       "name": "webbed neck",
+       "code": "Q18.3"
+      },
+      {
+       "name": "facial dysmorphism",
+       "code": null
+      },
+      {
+       "name": "neurodevelopmental delay",
+       "code": null
+      },
+      {
+       "name": "intellectual disability",
+       "code": "F79"
+      },
+      {
+       "name": "autism spectrum disorder",
+       "code": "F84.0"
+      },
+      {
+       "name": "14q24.1q24.2 deletion",
+       "code": null
+      },
+      {
+       "name": "bronchopulmonary infection",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 319,
+   "figures": 1,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Clinical scores",
+    "Genetic testing",
+    "Figures"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12457179.1",
+   "title": "Established and emerging use of sodium-glucose cotransporter-2 inhibitors in pediatric population with type 2 diabetes: a case report and literature review",
+   "citation": "Front Endocrinol (Lausanne). 2025 Sep 10;16:1629488. doi: 10.3389/fendo.2025.1629488",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "14-year-old female with poorly controlled type 2 diabetes treated with empagliflozin",
+     "bundle": "15c97b01-c92b-5d5e-844d-66a0f228c5f4",
+     "resources": 156,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 132,
+      "Condition": 5,
+      "MedicationStatement": 7,
+      "Procedure": 3,
+      "FamilyMemberHistory": 2,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "1–17 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "type 2 diabetes",
+       "code": "E11.9"
+      },
+      {
+       "name": "obesity",
+       "code": "E66.9"
+      },
+      {
+       "name": "acanthosis nigricans",
+       "code": "L83"
+      }
+     ]
+    }
+   ],
+   "facts": 114,
+   "figures": 2,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Vital signs",
+    "Genetic testing",
+    "Figures"
+   ],
+   "ages": [
+    "1–17 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12577925.1",
+   "title": "EDTA-dependent pseudothrombocytopenia mimicking dengue-associated severe thrombocytopenia: a case report",
+   "citation": "Ann Med Surg (Lond). 2025 Sep 15;87(11):7715–8. doi: 10.1097/MS9.0000000000003916",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "24-year-old man with EDTA-dependent pseudothrombocytopenia mimicking dengue fever",
+     "bundle": "9443b3e1-26ee-528b-ac4a-f523d05016d3",
+     "resources": 155,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 127,
+      "Condition": 5,
+      "MedicationStatement": 2,
+      "Procedure": 5,
+      "ServiceRequest": 6,
+      "CarePlan": 5,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "EDTA-dependent pseudothrombocytopenia",
+       "code": null
+      },
+      {
+       "name": "thrombocytopenia",
+       "code": "D69.6"
+      },
+      {
+       "name": "dengue fever",
+       "code": "A90"
+      }
+     ]
+    }
+   ],
+   "facts": 154,
+   "figures": 0,
+   "themes": [
+    "Pathology",
+    "Microbiology",
+    "Vital signs"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12592069.1",
+   "title": "Case Report: Dupilumab combined with allergen-specific immunotherapy in severe atopic dermatitis and asthma",
+   "citation": "Front Allergy. 2025 Oct 24;6:1698053. doi: 10.3389/falgy.2025.1698053",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "24-year-old man with severe atopic dermatitis and partly controlled moderate bronchial asthma",
+     "bundle": "83c0fb45-4fca-52d4-b64a-c3193514db0c",
+     "resources": 189,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 163,
+      "Condition": 4,
+      "MedicationStatement": 11,
+      "Procedure": 4,
+      "FamilyMemberHistory": 1,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "atopic dermatitis",
+       "code": "L20.9"
+      },
+      {
+       "name": "bronchial asthma",
+       "code": null
+      },
+      {
+       "name": "peripheral eosinophilia",
+       "code": "D72.10"
+      },
+      {
+       "name": "house dust mite and Alternaria alternata sensitization",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 161,
+   "figures": 2,
+   "themes": [
+    "Serial measurements",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12605513.1",
+   "title": "Case Report: Exogenous insulin antibody syndrome complicated with chronic renal failure and long-term history of type 2 diabetes: report of two cases",
+   "citation": "Front Endocrinol (Lausanne). 2025 Oct 29;16:1676062. doi: 10.3389/fendo.2025.1676062",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "Case 1: 83-year-old male with type 2 diabetes and chronic renal failure",
+     "bundle": "1455d9a9-7ade-501e-9294-79ddaf5c01a0",
+     "resources": 181,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 121,
+      "Condition": 30,
+      "MedicationStatement": 17,
+      "Procedure": 6,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "80 years and over",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "exogenous insulin antibody syndrome",
+       "code": null
+      },
+      {
+       "name": "type 2 diabetes",
+       "code": "E11.9"
+      },
+      {
+       "name": "diabetic kidney disease",
+       "code": "E11.22"
+      },
+      {
+       "name": "chronic kidney disease",
+       "code": "N18.9"
+      },
+      {
+       "name": "chronic renal failure",
+       "code": "N18.9"
+      },
+      {
+       "name": "end-stage renal disease",
+       "code": "N18.6"
+      },
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "heart failure",
+       "code": "I50.9"
+      },
+      {
+       "name": "cerebral infarction",
+       "code": null
+      },
+      {
+       "name": "hypoglycemia",
+       "code": "E16.2"
+      },
+      {
+       "name": "hyperglycemia",
+       "code": "E11.65"
+      },
+      {
+       "name": "hyperinsulinemia",
+       "code": null
+      },
+      {
+       "name": "subcutaneous nodules",
+       "code": null
+      },
+      {
+       "name": "subcutaneous fat hyperplasia",
+       "code": null
+      },
+      {
+       "name": "prostatic hyperplasia",
+       "code": "N40.0"
+      },
+      {
+       "name": "bilateral renal cysts",
+       "code": null
+      },
+      {
+       "name": "liver cirrhosis",
+       "code": "K74.60"
+      },
+      {
+       "name": "lower extremity arteriosclerosis",
+       "code": null
+      },
+      {
+       "name": "bilateral carotid atherosclerosis",
+       "code": null
+      },
+      {
+       "name": "bilateral thyroid nodules",
+       "code": null
+      },
+      {
+       "name": "pulmonary nodules",
+       "code": null
+      },
+      {
+       "name": "aortic and coronary artery calcifications",
+       "code": null
+      },
+      {
+       "name": "senile brain changes",
+       "code": null
+      },
+      {
+       "name": "bilateral frontal-parietal and periventricular low-density foci",
+       "code": null
+      },
+      {
+       "name": "cerebral arteriosclerosis",
+       "code": "I67.2"
+      },
+      {
+       "name": "left middle cerebral artery M2 segment narrowing and partial occlusion",
+       "code": "I66.02"
+      },
+      {
+       "name": "first-degree atrioventricular block",
+       "code": "I44.0"
+      },
+      {
+       "name": "latent autoimmune diabetes in adults",
+       "code": null
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "Case 2: 86-year-old male with type 2 diabetes and chronic renal failure",
+     "bundle": "bd035542-1ff4-5ca9-9e87-6d8a2302b0c2",
+     "resources": 160,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 117,
+      "Condition": 17,
+      "MedicationStatement": 15,
+      "Procedure": 4,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "80 years and over",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "type 2 diabetes",
+       "code": "E11.9"
+      },
+      {
+       "name": "diabetic kidney disease",
+       "code": "E11.22"
+      },
+      {
+       "name": "chronic renal failure",
+       "code": "N18.6"
+      },
+      {
+       "name": "end-stage renal disease",
+       "code": "N18.6"
+      },
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "prostatic hyperplasia",
+       "code": "N40.0"
+      },
+      {
+       "name": "liver cirrhosis",
+       "code": "K74.60"
+      },
+      {
+       "name": "bilateral renal atrophy",
+       "code": null
+      },
+      {
+       "name": "aortic and coronary artery calcifications",
+       "code": null
+      },
+      {
+       "name": "cardiomegaly",
+       "code": "I51.7"
+      },
+      {
+       "name": "left atrial enlargement",
+       "code": null
+      },
+      {
+       "name": "impaired left ventricular diastolic function",
+       "code": null
+      },
+      {
+       "name": "complete right bundle branch block",
+       "code": "I45.10"
+      },
+      {
+       "name": "exogenous insulin antibody syndrome",
+       "code": null
+      },
+      {
+       "name": "hypoglycemia",
+       "code": null
+      },
+      {
+       "name": "hyperglycemia",
+       "code": "E11.65"
+      },
+      {
+       "name": "LADA",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 275,
+   "figures": 1,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Vital signs",
+    "Several patients",
+    "Figures"
+   ],
+   "ages": [
+    "80 years and over"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12611315.1",
+   "title": "Sequential Use of Tezepelumab and Bronchoscopic Lung Volume Reduction With Endobronchial Valves in a Patient With Severe Asthma‐COPD Overlap and Heterogeneous Emphysema: A Case Report",
+   "citation": "Respirol Case Rep. 2025 Nov 12;13(11):e70407. doi: 10.1002/rcr2.70407",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "71-year-old woman with severe asthma-COPD overlap",
+     "bundle": "efbd2610-512b-5213-aa72-737828fc0d29",
+     "resources": 178,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 163,
+      "Condition": 4,
+      "MedicationStatement": 3,
+      "Procedure": 2,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "Asthma-COPD overlap",
+       "code": null
+      },
+      {
+       "name": "severe allergic asthma",
+       "code": null
+      },
+      {
+       "name": "allergic rhinitis",
+       "code": null
+      },
+      {
+       "name": "hyperinflation",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 112,
+   "figures": 2,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12640626.1",
+   "title": "Congenital Leukemia: Presentation of Three Cases",
+   "citation": "Cureus. 2025 Oct 24;17(10):e95318. doi: 10.7759/cureus.95318",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "Male neonate born with hydrops fetalis and hematological disorders",
+     "bundle": "d45dd063-09e3-5b97-a09d-3125268d39c3",
+     "resources": 100,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 82,
+      "Condition": 9,
+      "Procedure": 3,
+      "FamilyMemberHistory": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": null,
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "hydrops fetalis",
+       "code": "P83.2"
+      },
+      {
+       "name": "hematological disorders",
+       "code": "P61.9"
+      },
+      {
+       "name": "acute megakaryoblastic leukemia (AMKL) (M7)",
+       "code": "C94.20"
+      },
+      {
+       "name": "anemia",
+       "code": "D64.9"
+      },
+      {
+       "name": "thrombocytopenia",
+       "code": "D69.6"
+      },
+      {
+       "name": "tricuspid valve regurgitation",
+       "code": "I36.1"
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "Male neonate with suspected congenital hepatosplenomegaly, jaundice, and thrombocytopenia",
+     "bundle": "4acf5488-ab0e-575c-9f04-8ac333176b8d",
+     "resources": 146,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 119,
+      "Condition": 10,
+      "MedicationStatement": 6,
+      "Procedure": 4,
+      "FamilyMemberHistory": 1,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": null,
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "acute megakaryoblastic leukemia (AMKL)",
+       "code": "C94.20"
+      },
+      {
+       "name": "thrombocytopenia",
+       "code": "D69.6"
+      },
+      {
+       "name": "anemia",
+       "code": "D64.9"
+      },
+      {
+       "name": "leukocytosis",
+       "code": "D72.829"
+      },
+      {
+       "name": "cholestasis",
+       "code": "K83.1"
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "Full-term female newborn admitted for thrombocytopenia",
+     "bundle": "7a510eb3-8697-52ad-bb42-f4328669da50",
+     "resources": 82,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 52,
+      "Condition": 13,
+      "MedicationStatement": 5,
+      "Procedure": 3,
+      "FamilyMemberHistory": 3,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "Under 1 year",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "acute megakaryoblastic leukemia (AMKL)",
+       "code": "C94.20"
+      },
+      {
+       "name": "thrombocytopenia",
+       "code": "D69.6"
+      },
+      {
+       "name": "pancytopenia",
+       "code": "D61.818"
+      },
+      {
+       "name": "hyperferritinemia",
+       "code": null
+      },
+      {
+       "name": "hypofibrinogenemia",
+       "code": "D68.8"
+      },
+      {
+       "name": "sepsis due to Stenotrophomonas maltophilia",
+       "code": null
+      },
+      {
+       "name": "pneumothorax",
+       "code": "J93.9"
+      },
+      {
+       "name": "severe anemia",
+       "code": null
+      },
+      {
+       "name": "liver failure",
+       "code": "K72.90"
+      },
+      {
+       "name": "pulmonary bleeding",
+       "code": "R04.89"
+      },
+      {
+       "name": "hypoalbuminemia",
+       "code": "E88.09"
+      },
+      {
+       "name": "metabolic acidosis",
+       "code": "E87.20"
+      }
+     ]
+    }
+   ],
+   "facts": 290,
+   "figures": 1,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Vital signs",
+    "Clinical scores",
+    "Genetic testing",
+    "Several patients",
+    "Figures"
+   ],
+   "ages": [
+    "Under 1 year"
+   ],
+   "sexes": [
+    "Female",
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12689009.1",
+   "title": "Ocular administration of brinzolamide leading to Stevens-Johnson syndrome/toxic epidermal necrolysis overlap: A case report and review",
+   "citation": "Medicine (Baltimore). 2026 May 12;104(49):e46362. doi: 10.1097/MD.0000000000046362",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "31-year-old man with brinzolamide-induced SJS/TEN overlap",
+     "bundle": "ff8a0c04-6663-5283-a132-a25b6e992cf7",
+     "resources": 125,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 94,
+      "Condition": 10,
+      "MedicationStatement": 12,
+      "Procedure": 4,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "SJS/TEN overlap syndrome",
+       "code": "L51.3"
+      },
+      {
+       "name": "secondary glaucoma",
+       "code": null
+      },
+      {
+       "name": "traumatic retinal detachment",
+       "code": null
+      },
+      {
+       "name": "leukopenia",
+       "code": "D72.819"
+      },
+      {
+       "name": "thrombocytopenia",
+       "code": "D69.6"
+      },
+      {
+       "name": "hypoalbuminemia",
+       "code": "E88.09"
+      },
+      {
+       "name": "elevated liver enzymes",
+       "code": null
+      },
+      {
+       "name": "symblepharon",
+       "code": "H11.232"
+      },
+      {
+       "name": "dense corneal scarring",
+       "code": null
+      },
+      {
+       "name": "residual hyperpigmentation",
+       "code": "L81.0"
+      }
+     ]
+    }
+   ],
+   "facts": 122,
+   "figures": 2,
+   "themes": [
+    "Pathology",
+    "Microbiology",
+    "Clinical scores",
+    "Genetic testing",
+    "Figures"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12711414.1",
+   "title": "Laparoscopic Cholecystectomy for Acute Cholecystitis in a Patient with Acquired Hemophilia A: A Case Report of Perioperative Hemostatic Management with Plasma Exchange",
+   "citation": "Surg Case Rep. 2025 Dec 16;11(1):25-0533. doi: 10.70352/scrj.cr.25-0533",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "79-year-old woman with acquired hemophilia A and acute cholecystitis",
+     "bundle": "59ebf268-cfb0-5a73-b02b-a8a3c4d82e73",
+     "resources": 119,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 92,
+      "Condition": 6,
+      "MedicationStatement": 7,
+      "Procedure": 8,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "acquired hemophilia A",
+       "code": "D68.311"
+      },
+      {
+       "name": "acute cholecystitis",
+       "code": "K81.0"
+      },
+      {
+       "name": "gangrenous cholecystitis",
+       "code": "K81.0"
+      },
+      {
+       "name": "bile leakage",
+       "code": null
+      },
+      {
+       "name": "localized peritonitis",
+       "code": "K65.9"
+      }
+     ]
+    }
+   ],
+   "facts": 124,
+   "figures": 6,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12728242.1",
+   "title": "Conservative Management of a Ruptured Simple Hepatic Cyst: A Case Report",
+   "citation": "Cureus. 2025 Nov 23;17(11):e97594. doi: 10.7759/cureus.97594",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "79-year-old woman with ruptured simple hepatic cyst",
+     "bundle": "0ee1706f-4c6a-5f79-992c-7ee4c5d3f11e",
+     "resources": 189,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 147,
+      "Condition": 10,
+      "MedicationStatement": 5,
+      "MedicationRequest": 1,
+      "Procedure": 11,
+      "ServiceRequest": 1,
+      "CarePlan": 9,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "osteoarthritis",
+       "code": "M19.90"
+      },
+      {
+       "name": "simple hepatic cyst",
+       "code": "K76.89"
+      },
+      {
+       "name": "ruptured simple hepatic cyst",
+       "code": null
+      },
+      {
+       "name": "mild renal impairment",
+       "code": null
+      },
+      {
+       "name": "neutrophilia",
+       "code": null
+      },
+      {
+       "name": "lymphopenia",
+       "code": "D72.810"
+      },
+      {
+       "name": "spontaneous rupture of hepatic cyst",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 227,
+   "figures": 2,
+   "themes": [
+    "Imaging",
+    "Microbiology",
+    "Vital signs",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12764371.1",
+   "title": "Severe Hepatic Enzyme Elevation and Coagulation Abnormalities in a Pregnant Woman With Recent COVID-19 Infection and Preterm Premature Rupture of Membranes: A Case Report",
+   "citation": "Cureus. 2025 Dec 4;17(12):e98462. doi: 10.7759/cureus.98462",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "30-year-old primigravida with PPROM, hepatic enzyme elevation, and coagulopathy",
+     "bundle": "4d1156af-3dd9-5d25-a65d-f50348746aa8",
+     "resources": 299,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 258,
+      "Condition": 18,
+      "MedicationStatement": 5,
+      "Procedure": 9,
+      "CarePlan": 4,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "PPROM",
+       "code": null
+      },
+      {
+       "name": "allergic rhinitis",
+       "code": "J30.9"
+      },
+      {
+       "name": "gestational diabetes",
+       "code": "O24.410"
+      },
+      {
+       "name": "SARS-CoV-2 infection",
+       "code": "Z86.16"
+      },
+      {
+       "name": "acute fatty liver of pregnancy",
+       "code": null
+      },
+      {
+       "name": "HELLP syndrome",
+       "code": "O14.20"
+      },
+      {
+       "name": "COVID-19-related hepatic injury or post-viral inflammatory syndrome",
+       "code": null
+      },
+      {
+       "name": "hepatic dysfunction",
+       "code": "K76.89"
+      },
+      {
+       "name": "renal impairment",
+       "code": null
+      },
+      {
+       "name": "acute tubular necrosis",
+       "code": "N17.0"
+      },
+      {
+       "name": "coagulopathy",
+       "code": null
+      },
+      {
+       "name": "tachycardia",
+       "code": "R00.0"
+      },
+      {
+       "name": "metabolic lactic acidosis",
+       "code": "E87.20"
+      },
+      {
+       "name": "respiratory decompensation",
+       "code": "J98.8"
+      },
+      {
+       "name": "oligohydramnios",
+       "code": "O41.00X0"
+      },
+      {
+       "name": "diffuse hepatic steatosis",
+       "code": "K76.0"
+      },
+      {
+       "name": "hyperuricemia",
+       "code": "E79.0"
+      },
+      {
+       "name": "leukocytosis",
+       "code": "D72.829"
+      }
+     ]
+    }
+   ],
+   "facts": 235,
+   "figures": 0,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Microbiology",
+    "Vital signs",
+    "Clinical scores"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12765198.1",
+   "title": "Successful Pregnancy Following Ovarian Platelet-Rich Plasma (PRP) Treatment, the DuoStim Protocol, and Preimplantation Genetic Testing for Aneuploidy in a Patient With Premature Ovarian Insufficiency: A Case Report",
+   "citation": "Cureus. 2025 Dec 5;17(12):e98505. doi: 10.7759/cureus.98505",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "39-year-old woman with premature ovarian insufficiency",
+     "bundle": "0013f027-3ecb-5a0f-829b-6bba496586d8",
+     "resources": 129,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 87,
+      "Condition": 5,
+      "MedicationStatement": 11,
+      "Procedure": 14,
+      "CarePlan": 7,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "premature ovarian insufficiency (POI)",
+       "code": null
+      },
+      {
+       "name": "secondary infertility",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 144,
+   "figures": 5,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Genetic testing",
+    "Figures"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12777762.1",
+   "title": "Brachioradialis tendon transfer for a thumb and finger extension disorder owing to distal-type cervical spondylotic amyotrophy: a case report",
+   "citation": "Case Reports Plast Surg Hand Surg. 2025 Dec 30;13(1):2610522. doi: 10.1080/23320885.2025.2610522",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "72-year-old right-dominant man with left thumb and finger extension impairment due to distal-type cervical spondylotic amyotrophy",
+     "bundle": "b683f442-9b03-53da-abc8-cc116103743e",
+     "resources": 70,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 50,
+      "Condition": 2,
+      "Procedure": 7,
+      "CarePlan": 6,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "distal-type cervical spondylotic amyotrophy (C8 segment involvement)",
+       "code": null
+      },
+      {
+       "name": "spinal cord compression at C6/7 level",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 69,
+   "figures": 5,
+   "themes": [
+    "Imaging",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12802722.1",
+   "title": "Case report: Ethylene glycol intoxication presenting as a mimic of acute stroke: a report of three cases",
+   "citation": "Front Stroke. 2023 Aug 2;2:1233229. doi: 10.3389/fstro.2023.1233229",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "Case 1: 54-year-old man with ethylene glycol intoxication presenting as acute stroke mimic",
+     "bundle": "12f9bbec-a493-541e-8f8c-3ba4990d65cb",
+     "resources": 127,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 99,
+      "Condition": 5,
+      "MedicationStatement": 4,
+      "Procedure": 12,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "ethylene glycol intoxication",
+       "code": null
+      },
+      {
+       "name": "vertebrobasilar territory stroke",
+       "code": null
+      },
+      {
+       "name": "severe metabolic acidosis",
+       "code": null
+      },
+      {
+       "name": "pneumonia",
+       "code": "J18.9"
+      },
+      {
+       "name": "nephrotoxicity",
+       "code": null
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "Case 2: 78-year-old man with ethylene glycol intoxication presenting as acute stroke mimic",
+     "bundle": "3d88726c-be15-50cf-8dde-c00a445c9003",
+     "resources": 126,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 91,
+      "Condition": 9,
+      "MedicationStatement": 10,
+      "Procedure": 8,
+      "CarePlan": 3,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "ethylene glycol intoxication",
+       "code": null
+      },
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "diabetes mellitus",
+       "code": null
+      },
+      {
+       "name": "Parkinson's disease",
+       "code": "G20.A1"
+      },
+      {
+       "name": "metabolic acidosis",
+       "code": "E87.20"
+      },
+      {
+       "name": "nephrotoxicity",
+       "code": null
+      },
+      {
+       "name": "pneumonia",
+       "code": "J18.9"
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "Case 3: 54-year-old man with ethylene glycol intoxication and prior stroke presenting as seizure/stroke mimic",
+     "bundle": "17656629-7fcc-5439-a592-463cd4ad4c66",
+     "resources": 101,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 77,
+      "Condition": 9,
+      "MedicationStatement": 5,
+      "Procedure": 4,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "ethylene glycol intoxication",
+       "code": null
+      },
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "chronic alcoholism",
+       "code": "F10.20"
+      },
+      {
+       "name": "alcohol intoxication",
+       "code": "F10.929"
+      },
+      {
+       "name": "delirium",
+       "code": "R41.0"
+      },
+      {
+       "name": "right-hemispheric ischemic stroke",
+       "code": null
+      },
+      {
+       "name": "hyponatremia",
+       "code": "E87.1"
+      },
+      {
+       "name": "epileptic seizure",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 353,
+   "figures": 1,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Vital signs",
+    "Clinical scores",
+    "Several patients",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years",
+    "65–79 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12817846.1",
+   "title": "From urinary tract infection to deafness: community-acquired meningitis in an adult caused by hypervirulent Klebsiella pneumoniae—a case report",
+   "citation": "BMC Infect Dis. 2025 Dec 13;26:89. doi: 10.1186/s12879-025-12340-0",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "46-year-old man with community-acquired urinary tract infection progressing to meningitis and bilateral sensorineural deafness",
+     "bundle": "570cbffa-706f-5036-abc9-ad7c855a2796",
+     "resources": 237,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 190,
+      "Condition": 16,
+      "MedicationStatement": 11,
+      "MedicationRequest": 1,
+      "Procedure": 9,
+      "CarePlan": 5,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "type 2 diabetes mellitus",
+       "code": null
+      },
+      {
+       "name": "diabetic ketoacidosis",
+       "code": null
+      },
+      {
+       "name": "severe urinary tract infection",
+       "code": "N39.0"
+      },
+      {
+       "name": "purulent meningitis",
+       "code": "G00.8"
+      },
+      {
+       "name": "bilateral sensorineural deafness",
+       "code": "H90.3"
+      },
+      {
+       "name": "intracranial hypertension",
+       "code": "G93.2"
+      },
+      {
+       "name": "septic emboli or metastatic infection",
+       "code": null
+      },
+      {
+       "name": "cerebrovascular event",
+       "code": null
+      },
+      {
+       "name": "hyperglycemia",
+       "code": "R73.9"
+      },
+      {
+       "name": "metabolic acidosis",
+       "code": null
+      },
+      {
+       "name": "leukocytosis",
+       "code": "D72.829"
+      },
+      {
+       "name": "mild hyperbilirubinemia",
+       "code": null
+      },
+      {
+       "name": "hypoalbuminemia",
+       "code": "E88.09"
+      },
+      {
+       "name": "pyuria",
+       "code": "R82.81"
+      },
+      {
+       "name": "microhematuria",
+       "code": null
+      },
+      {
+       "name": "mild hydronephrosis",
+       "code": "N13.30"
+      }
+     ]
+    }
+   ],
+   "facts": 216,
+   "figures": 2,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Vital signs",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12834080.1",
+   "title": "Psychosis as the Initial and Main Presentation of Graves’ Disease: A Case Report from Saudi Arabia",
+   "citation": "Cureus. 2025 Dec 27;17(12):e100181. doi: 10.7759/cureus.100181",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "29-year-old woman with Graves' disease presenting with isolated psychosis",
+     "bundle": "bdb25ae3-aba1-5a0f-a8aa-e2ec9c3d1bd2",
+     "resources": 102,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 84,
+      "Condition": 5,
+      "MedicationStatement": 4,
+      "Procedure": 2,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "Graves' disease",
+       "code": null
+      },
+      {
+       "name": "psychotic disorder due to another medical condition",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 102,
+   "figures": 2,
+   "themes": [
+    "Imaging",
+    "Figures"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC12846762.1",
+   "title": "Successful One-Stage Revision With Continuous Local Antibiotic Perfusion (CLAP) for Delayed Periprosthetic Joint Infection After Reverse Shoulder Arthroplasty: A Case Report",
+   "citation": "Cureus. 2025 Dec 28;17(12):e100273. doi: 10.7759/cureus.100273",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "72-year-old man with delayed periprosthetic joint infection after reverse shoulder arthroplasty",
+     "bundle": "504331e9-e866-5b36-ae16-ccac6bd4c3f5",
+     "resources": 226,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 186,
+      "Condition": 5,
+      "MedicationStatement": 8,
+      "Procedure": 16,
+      "CarePlan": 6,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "diabetes mellitus",
+       "code": "E11.9"
+      },
+      {
+       "name": "cuff tear arthropathy",
+       "code": null
+      },
+      {
+       "name": "chronic periprosthetic joint infection",
+       "code": null
+      },
+      {
+       "name": "sinus tract",
+       "code": null
+      },
+      {
+       "name": "osteolysis",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 186,
+   "figures": 6,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12859379.1",
+   "title": "Olanzapine Overdose in an Adult Male Presenting With Altered Sensorium and Pinpoint Pupil: A Case Report",
+   "citation": "Cureus. 2025 Dec 31;17(12):e100538. doi: 10.7759/cureus.100538",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "51-year-old male with olanzapine overdose presenting unconscious with pinpoint pupils",
+     "bundle": "f4c57471-fcac-5860-adb3-ab307d72f9fe",
+     "resources": 225,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 168,
+      "Condition": 8,
+      "MedicationStatement": 30,
+      "MedicationRequest": 4,
+      "Procedure": 6,
+      "ServiceRequest": 1,
+      "CarePlan": 3,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "olanzapine overdose",
+       "code": null
+      },
+      {
+       "name": "generalized anxiety disorder",
+       "code": "F41.1"
+      }
+     ]
+    }
+   ],
+   "facts": 190,
+   "figures": 0,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Vital signs",
+    "Clinical scores"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC12884857.1",
+   "title": "Perioperative Diagnosis of Acute Pulmonary Embolism Following Laparoscopic Hysterectomy Under General Anaesthesia: A Rare Case Report",
+   "citation": "Turk J Anaesthesiol Reanim. 2026 Feb 9;54(1):75–80. doi: 10.4274/TJAR.2025.252004",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "51-year-old woman with acute pulmonary embolism after laparoscopic hysterectomy",
+     "bundle": "1c218c47-b07c-58dc-bfc2-af6738dcb0a9",
+     "resources": 169,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 112,
+      "Condition": 9,
+      "MedicationStatement": 13,
+      "ServiceRequest": 2,
+      "Procedure": 25,
+      "CarePlan": 3,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "diabetes type II",
+       "code": "E11.9"
+      },
+      {
+       "name": "uterine adenomyosis",
+       "code": "N80.03"
+      },
+      {
+       "name": "acute pulmonary embolism",
+       "code": "I26.99"
+      },
+      {
+       "name": "deep vein thrombosis",
+       "code": null
+      },
+      {
+       "name": "right heart strain",
+       "code": "I26.09"
+      },
+      {
+       "name": "pulmonary hypertension",
+       "code": "I27.20"
+      },
+      {
+       "name": "cardiomegaly",
+       "code": "I51.7"
+      },
+      {
+       "name": "mild tricuspid regurgitation",
+       "code": "I36.1"
+      }
+     ]
+    }
+   ],
+   "facts": 178,
+   "figures": 6,
+   "themes": [
+    "Imaging",
+    "Vital signs",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC13592934.1",
+   "title": "Plasma exchange combined with low-dose rituximab treatment: A case report of severe antineutrophil cytoplasmic antibody (ANCA)-associated vasculitis in the elderly",
+   "citation": "Medicine (Baltimore). 2025 Sep 26;104(39):e44822. doi: 10.1097/MD.0000000000044822",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "84-year-old man with severe ANCA-associated vasculitis and chronic kidney disease",
+     "bundle": "cf804e32-0e46-58d1-bb1b-8a5a7120aeeb",
+     "resources": 244,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 161,
+      "Condition": 15,
+      "MedicationStatement": 28,
+      "Procedure": 24,
+      "CarePlan": 11,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "80 years and over",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "ANCA-associated vasculitis",
+       "code": "I77.82"
+      },
+      {
+       "name": "chronic kidney disease",
+       "code": "N18.9"
+      },
+      {
+       "name": "chronic renal insufficiency",
+       "code": "N18.9"
+      },
+      {
+       "name": "ANCA-associated nephritis",
+       "code": null
+      },
+      {
+       "name": "ANCA-associated nephritis",
+       "code": null
+      },
+      {
+       "name": "acute-on-chronic kidney disease",
+       "code": null
+      },
+      {
+       "name": "acute renal failure",
+       "code": "N17.9"
+      },
+      {
+       "name": "acute pulmonary edema",
+       "code": "J81.0"
+      },
+      {
+       "name": "myocardial ischemia",
+       "code": null
+      },
+      {
+       "name": "pneumonia in both lungs",
+       "code": null
+      },
+      {
+       "name": "coronary artery disease",
+       "code": "I25.10"
+      },
+      {
+       "name": "hyperlipidemia",
+       "code": "E78.5"
+      },
+      {
+       "name": "impaired glucose tolerance",
+       "code": "R73.02"
+      },
+      {
+       "name": "trilineage cytopenia",
+       "code": null
+      },
+      {
+       "name": "myelosuppression",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 262,
+   "figures": 4,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "80 years and over"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC13593041.1",
+   "title": "Hemorrhagic cardiac tamponade complicating myocardial infarction in a hemodialysis patient with essential thrombocythemia: A case report",
+   "citation": "Medicine (Baltimore). 2025 Sep 26;104(39):e44898. doi: 10.1097/MD.0000000000044898",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "71-year-old hemodialysis-dependent woman with essential thrombocythemia, NSTEMI, and hemorrhagic cardiac tamponade",
+     "bundle": "06029b11-6803-5346-9682-5e7411cbf7fe",
+     "resources": 271,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 221,
+      "Condition": 18,
+      "MedicationStatement": 12,
+      "Procedure": 13,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "essential thrombocythemia",
+       "code": "D47.3"
+      },
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "hypothyroidism",
+       "code": "E03.9"
+      },
+      {
+       "name": "end-stage renal disease",
+       "code": "N18.6"
+      },
+      {
+       "name": "type 2 diabetes mellitus",
+       "code": "E11.9"
+      },
+      {
+       "name": "diabetic kidney disease",
+       "code": "E11.22"
+      },
+      {
+       "name": "coronary artery disease",
+       "code": "I25.10"
+      },
+      {
+       "name": "peptic ulcer disease",
+       "code": null
+      },
+      {
+       "name": "coronary artery stenosis",
+       "code": null
+      },
+      {
+       "name": "acute non-ST elevation myocardial infarction",
+       "code": "I21.4"
+      },
+      {
+       "name": "pericardial effusion",
+       "code": "I31.39"
+      },
+      {
+       "name": "cardiac tamponade",
+       "code": "I31.4"
+      },
+      {
+       "name": "hemorrhagic cardiac tamponade",
+       "code": null
+      },
+      {
+       "name": "pulse ventricular tachycardia",
+       "code": null
+      },
+      {
+       "name": "acute non-ST elevation myocardial infarction",
+       "code": "I21.4"
+      },
+      {
+       "name": "in-stent stenosis",
+       "code": null
+      },
+      {
+       "name": "acute non-ST elevation myocardial infarction",
+       "code": "I21.4"
+      },
+      {
+       "name": "in-stent restenosis",
+       "code": "T82.855A"
+      }
+     ]
+    }
+   ],
+   "facts": 191,
+   "figures": 2,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Vital signs",
+    "Genetic testing",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC5674453.1",
+   "title": "Cardiac arrest caused by rapidly increasing ascites in a patient with TAFRO syndrome: a case report",
+   "citation": "Acute Med Surg. 2017 Apr 17;4(3):344–8. doi: 10.1002/ams2.278",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "59-year-old Japanese man with TAFRO syndrome and rapidly increasing ascites leading to cardiac arrest",
+     "bundle": "c29a3067-6c65-5f8c-8afa-4dcc51c13ecb",
+     "resources": 187,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 141,
+      "Condition": 18,
+      "MedicationStatement": 14,
+      "Procedure": 9,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "TAFRO syndrome",
+       "code": null
+      },
+      {
+       "name": "hepatitis B virus infection",
+       "code": null
+      },
+      {
+       "name": "thrombocytopenia",
+       "code": "D69.6"
+      },
+      {
+       "name": "anemia",
+       "code": null
+      },
+      {
+       "name": "hypoalbuminemia",
+       "code": "E88.09"
+      },
+      {
+       "name": "renal dysfunction",
+       "code": null
+      },
+      {
+       "name": "abnormal coagulation",
+       "code": "R79.1"
+      },
+      {
+       "name": "anasarca",
+       "code": "R60.1"
+      },
+      {
+       "name": "ascites",
+       "code": "R18.8"
+      },
+      {
+       "name": "pleural effusion",
+       "code": "J90"
+      },
+      {
+       "name": "pericardial effusion",
+       "code": "I31.39"
+      },
+      {
+       "name": "reticulin myelofibrosis",
+       "code": null
+      },
+      {
+       "name": "increased megakaryocytes",
+       "code": null
+      },
+      {
+       "name": "hypertrophy of bilateral kidneys",
+       "code": "N28.81"
+      },
+      {
+       "name": "mixed-type Castleman's disease",
+       "code": null
+      },
+      {
+       "name": "cardiac arrest",
+       "code": null
+      },
+      {
+       "name": "shock",
+       "code": "R57.9"
+      },
+      {
+       "name": "respiratory failure",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 183,
+   "figures": 2,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Microbiology",
+    "Vital signs",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC6949662.1",
+   "title": "Anti-NMDAR Encephalitis: Higher Suspicious Needed for Earlier Diagnosis (Case Report, Literature Review and Diagnostic Criteria)",
+   "citation": "Case Rep Neurol Med. 2019 Dec 28;2019:7476254. doi: 10.1155/2019/7476254",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "female with acute psychiatric presentation, anti-NMDAR encephalitis and ovarian teratoma",
+     "bundle": "56ea214d-ca11-5abd-b7ca-f81e058ad713",
+     "resources": 126,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 91,
+      "Condition": 9,
+      "MedicationStatement": 9,
+      "Procedure": 8,
+      "CarePlan": 4,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "18–39 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "anti-NMDAR encephalitis",
+       "code": null
+      },
+      {
+       "name": "acute psychosis",
+       "code": null
+      },
+      {
+       "name": "infective encephalitis",
+       "code": null
+      },
+      {
+       "name": "teratoma",
+       "code": null
+      },
+      {
+       "name": "generalised tonic-clonic seizure",
+       "code": null
+      },
+      {
+       "name": "autonomic dysfunction",
+       "code": null
+      },
+      {
+       "name": "orofacial dyskinesia",
+       "code": null
+      },
+      {
+       "name": "diffuse encephalopathy",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 130,
+   "figures": 0,
+   "themes": [
+    "Imaging",
+    "Microbiology",
+    "Vital signs",
+    "Clinical scores"
+   ],
+   "ages": [
+    "18–39 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC7692694.1",
+   "title": "Case Report of Patients with Acute Respiratory Distress Syndrome Caused by COVID-19: Successfully Treated by Venovenous Extracorporeal Membrane Oxygenation and an Ultra-Protective Ventilation",
+   "citation": "Medicina (Kaunas). 2020 Oct 29;56(11):570. doi: 10.3390/medicina56110570",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "Case 1: 69-year-old man with COVID-19-induced ARDS",
+     "bundle": "4531f083-0e2e-5a5b-b2bc-596e9ac821b0",
+     "resources": 76,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 50,
+      "Condition": 4,
+      "MedicationStatement": 10,
+      "Procedure": 3,
+      "CarePlan": 4,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "COVID-19",
+       "code": "U07.1"
+      },
+      {
+       "name": "acute respiratory distress syndrome (ARDS)",
+       "code": "J80"
+      },
+      {
+       "name": "hypertension",
+       "code": "I10"
+      },
+      {
+       "name": "diabetes mellitus",
+       "code": null
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "Case 2: 56-year-old woman with COVID-19-induced ARDS",
+     "bundle": "e62ec596-4c6d-567a-a89f-69e402759579",
+     "resources": 83,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 54,
+      "Condition": 2,
+      "MedicationStatement": 11,
+      "Procedure": 5,
+      "CarePlan": 6,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "COVID-19 infection",
+       "code": "Z86.16"
+      },
+      {
+       "name": "acute respiratory distress syndrome",
+       "code": "J80"
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "Case 3: 58-year-old man with COVID-19-induced ARDS",
+     "bundle": "f30e7164-d558-5a31-9776-44d4165e0c63",
+     "resources": 77,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 52,
+      "Condition": 8,
+      "MedicationStatement": 5,
+      "Procedure": 3,
+      "CarePlan": 4,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "COVID-19 infection",
+       "code": "U07.1"
+      },
+      {
+       "name": "acute respiratory distress syndrome",
+       "code": "J80"
+      },
+      {
+       "name": "hypoxemic and hypercapnic respiratory failure",
+       "code": null
+      },
+      {
+       "name": "bilateral lung involvement",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 242,
+   "figures": 6,
+   "themes": [
+    "Imaging",
+    "Microbiology",
+    "Clinical scores",
+    "Several patients",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years",
+    "65–79 years"
+   ],
+   "sexes": [
+    "Female",
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC7769828.1",
+   "title": "Recovery From Acute Kidney Injury With Diabetic Ketoacidosis Following SARS-CoV-2 Infection: A Case Report and Literature Review",
+   "citation": "Cureus. 2020 Nov 25;12(11):e11702. doi: 10.7759/cureus.11702",
+   "license": "CC BY 3.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "55-year-old man with type 2 diabetes presenting with DKA, AKI, and COVID-19",
+     "bundle": "a169325b-3146-55ad-abb8-dc14c3ef9508",
+     "resources": 473,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 414,
+      "Condition": 18,
+      "MedicationStatement": 21,
+      "Procedure": 11,
+      "ServiceRequest": 1,
+      "CarePlan": 3,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "type 2 diabetes",
+       "code": "E11.9"
+      },
+      {
+       "name": "diverticulitis",
+       "code": "K57.92"
+      },
+      {
+       "name": "hyperlipidemia",
+       "code": "E78.5"
+      },
+      {
+       "name": "diabetic ketoacidosis",
+       "code": "E11.10"
+      },
+      {
+       "name": "acute kidney injury",
+       "code": "N17.9"
+      },
+      {
+       "name": "COVID-19",
+       "code": "U07.1"
+      },
+      {
+       "name": "acute respiratory distress syndrome",
+       "code": "J80"
+      },
+      {
+       "name": "hematuria",
+       "code": "R31.9"
+      },
+      {
+       "name": "proteinuria",
+       "code": "R80.9"
+      },
+      {
+       "name": "ketonuria",
+       "code": "R82.4"
+      },
+      {
+       "name": "acute kidney injury",
+       "code": "N17.9"
+      },
+      {
+       "name": "DKA",
+       "code": null
+      },
+      {
+       "name": "COVID-19 pneumonia",
+       "code": "J12.82"
+      },
+      {
+       "name": "hyperkalemia",
+       "code": "E87.5"
+      },
+      {
+       "name": "multiorgan failure",
+       "code": null
+      },
+      {
+       "name": "acute thrombosis of left common femoral vein, femoral and popliteal vein",
+       "code": null
+      },
+      {
+       "name": "hematuria",
+       "code": "R31.9"
+      },
+      {
+       "name": "proteinuria",
+       "code": "R80.9"
+      }
+     ]
+    }
+   ],
+   "facts": 328,
+   "figures": 0,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Microbiology",
+    "Vital signs"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  },
+  {
+   "id": "PMC7803321.1",
+   "title": "A Multidisciplinary Approach of an Endo-Perio Lesion in a Severely Compromised Tooth: An 18-Year Follow-up Case Report",
+   "citation": "J Med Life. 2020 Oct-Dec;13(4):629–34. doi: 10.25122/jml-2020-0017",
+   "license": "CC BY 3.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "49-year-old woman with an endo-periodontal lesion of tooth 23",
+     "bundle": "dba31e2a-8db5-5a36-bc7e-482653e9a12c",
+     "resources": 190,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 148,
+      "Condition": 5,
+      "MedicationRequest": 2,
+      "Procedure": 14,
+      "ServiceRequest": 1,
+      "CarePlan": 15,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "gingival recession",
+       "code": null
+      },
+      {
+       "name": "primary endodontic lesion with secondary periodontal involvement",
+       "code": null
+      },
+      {
+       "name": "primary endodontic lesion",
+       "code": null
+      },
+      {
+       "name": "periodontal attachment loss",
+       "code": null
+      },
+      {
+       "name": "secondary trauma effects from occlusion",
+       "code": "K08.82"
+      }
+     ]
+    }
+   ],
+   "facts": 194,
+   "figures": 12,
+   "themes": [
+    "Imaging",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC8650745.1",
+   "title": "Severe hypothyroidism‐induced rhabdomyolysis: A case report",
+   "citation": "Clin Case Rep. 2021 Dec 7;9(12):e05107. doi: 10.1002/ccr3.5107",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "42-year-old man with hypothyroidism due to Hashimoto's thyroiditis complicated by severe rhabdomyolysis and acute kidney injury",
+     "bundle": "48d76daf-c2a3-5e34-8885-04bba5cc6f0f",
+     "resources": 204,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 184,
+      "Condition": 6,
+      "MedicationStatement": 2,
+      "Procedure": 5,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": null,
+     "conditions": [
+      {
+       "name": "hypothyroidism",
+       "code": "E03.9"
+      },
+      {
+       "name": "Hashimoto's thyroiditis",
+       "code": "E06.3"
+      },
+      {
+       "name": "rhabdomyolysis",
+       "code": "M62.82"
+      },
+      {
+       "name": "acute kidney injury",
+       "code": "N17.9"
+      },
+      {
+       "name": "goiter",
+       "code": "E04.9"
+      },
+      {
+       "name": "pericardial effusion",
+       "code": "I31.39"
+      }
+     ]
+    }
+   ],
+   "facts": 156,
+   "figures": 2,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Vital signs",
+    "Figures"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": []
+  },
+  {
+   "id": "PMC8657716.1",
+   "title": "Diagnostic Difficulties in a Case of Fetal Ventricular Tachycardia Associated with Neonatal COVID Infection: Case Report",
+   "citation": "Int J Environ Res Public Health. 2021 Dec 4;18(23):12796. doi: 10.3390/ijerph182312796",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "Female newborn with sotalol-controlled fetal ventricular tachycardia and neonatal SARS-CoV infection",
+     "bundle": "e7fc9283-6f6c-5245-bb93-bf0b12fb6d63",
+     "resources": 490,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 449,
+      "Condition": 18,
+      "MedicationStatement": 11,
+      "Procedure": 5,
+      "FamilyMemberHistory": 1,
+      "CarePlan": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": null,
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "SARS-CoV infection",
+       "code": null
+      },
+      {
+       "name": "ventricular tachycardia",
+       "code": null
+      },
+      {
+       "name": "myocardial injury",
+       "code": "I5A"
+      },
+      {
+       "name": "inflammatory myocardial injury",
+       "code": null
+      },
+      {
+       "name": "myocardial dysfunction",
+       "code": null
+      },
+      {
+       "name": "left ventricular systolic dysfunction",
+       "code": null
+      },
+      {
+       "name": "left ventricular diastolic dysfunction",
+       "code": "I50.30"
+      },
+      {
+       "name": "pericardial effusion",
+       "code": "I31.39"
+      },
+      {
+       "name": "coronary artery dilation",
+       "code": null
+      },
+      {
+       "name": "myocardial edema",
+       "code": null
+      },
+      {
+       "name": "regional wall motion abnormalities",
+       "code": null
+      },
+      {
+       "name": "heart failure",
+       "code": null
+      },
+      {
+       "name": "coagulopathy",
+       "code": null
+      },
+      {
+       "name": "inflammatory syndrome",
+       "code": null
+      },
+      {
+       "name": "arrhythmic storm",
+       "code": null
+      },
+      {
+       "name": "ventricular tachycardia",
+       "code": "I47.20"
+      },
+      {
+       "name": "ventricular bigeminy",
+       "code": "I49.82"
+      },
+      {
+       "name": "ventricular trigeminy",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 355,
+   "figures": 3,
+   "themes": [
+    "Serial measurements",
+    "Imaging",
+    "Microbiology",
+    "Figures"
+   ],
+   "ages": [],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC8871403.1",
+   "title": "Diagnostic Value of Preoperative Electrodiagnostic Analysis in a Patient with Facial Palsy and a Large Vestibular Schwannoma: Case Report",
+   "citation": "Diagnostics (Basel). 2022 Feb 20;12(2):542. doi: 10.3390/diagnostics12020542",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "79-year-old woman with right facial palsy and large vestibular schwannoma",
+     "bundle": "c8f0da74-f286-5275-92c9-28b2891312f8",
+     "resources": 167,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 145,
+      "Condition": 6,
+      "Procedure": 9,
+      "CarePlan": 2,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "65–79 years",
+     "sex": "Female",
+     "conditions": [
+      {
+       "name": "vestibular schwannoma",
+       "code": null
+      },
+      {
+       "name": "trigeminal neuropathy",
+       "code": "G50.8"
+      },
+      {
+       "name": "facial nerve injury",
+       "code": null
+      },
+      {
+       "name": "vestibulocochlear nerve injury",
+       "code": null
+      },
+      {
+       "name": "obstructive hydrocephalus",
+       "code": "G91.1"
+      },
+      {
+       "name": "hip fracture",
+       "code": null
+      }
+     ]
+    }
+   ],
+   "facts": 176,
+   "figures": 2,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Clinical scores",
+    "Figures"
+   ],
+   "ages": [
+    "65–79 years"
+   ],
+   "sexes": [
+    "Female"
+   ]
+  },
+  {
+   "id": "PMC9911106.1",
+   "title": "Single-agent carboplatin in extensive disease small-cell lung cancer patient with liver failure: a case report within the experience of a single institution",
+   "citation": "Anticancer Drugs. 2021 Mar 1;32(7):755–7. doi: 10.1097/CAD.0000000000001057",
+   "license": "CC BY 4.0",
+   "patients": [
+    {
+     "id": "p1",
+     "label": "70-year-old man with ED-SCLC and severe liver involvement",
+     "bundle": "1423f76f-b4b7-5f87-b588-073bbc85692f",
+     "resources": 53,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 33,
+      "Condition": 8,
+      "MedicationStatement": 4,
+      "Procedure": 3,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": null,
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "ED-SCLC",
+       "code": null
+      },
+      {
+       "name": "liver failure",
+       "code": "K72.90"
+      },
+      {
+       "name": "bone marrow failure",
+       "code": null
+      },
+      {
+       "name": "myelofibrosis",
+       "code": "D75.81"
+      },
+      {
+       "name": "ED-SCLC",
+       "code": null
+      },
+      {
+       "name": "liver failure",
+       "code": null
+      },
+      {
+       "name": "visceral crisis",
+       "code": null
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "79-year-old man with ED-SCLC and liver, bone, adrenal, and peritoneal metastases",
+     "bundle": "0d1218d4-89ab-50ac-8fba-666efcb51e9c",
+     "resources": 24,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 14,
+      "Condition": 4,
+      "MedicationStatement": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": null,
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "extensive disease small-cell lung cancer",
+       "code": null
+      },
+      {
+       "name": "severe liver impairment",
+       "code": null
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "53-year-old man with ED-SCLC and liver metastases",
+     "bundle": "04901e83-1c67-5a77-bdca-3259fbd66dd3",
+     "resources": 23,
+     "counts": {
+      "Patient": 1,
+      "Device": 1,
+      "DocumentReference": 2,
+      "Observation": 13,
+      "Condition": 4,
+      "MedicationStatement": 1,
+      "Provenance": 1
+     },
+     "passed": true,
+     "age": "40–64 years",
+     "sex": "Male",
+     "conditions": [
+      {
+       "name": "ED-SCLC",
+       "code": null
+      },
+      {
+       "name": "severe liver impairment",
+       "code": "K72.90"
+      }
+     ]
+    }
+   ],
+   "facts": 88,
+   "figures": 0,
+   "themes": [
+    "Imaging",
+    "Pathology",
+    "Clinical scores",
+    "Several patients"
+   ],
+   "ages": [
+    "40–64 years"
+   ],
+   "sexes": [
+    "Male"
+   ]
+  }
+ ],
+ "totals": {
+  "articles": 30,
+  "patients": 39,
+  "facts": 5876,
+  "figures": 79,
+  "resources": 6668
+ },
+ "featured": "PMC12817846.1"
+}

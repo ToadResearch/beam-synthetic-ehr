@@ -1,0 +1,255 @@
+"""Measurement requests partitioned by table rows, with explicit cell coverage.
+
+Never rewrite a value or unit. Optional literal-time projection copies the exact
+model-selected source cell, with an audit of the original text. Headers/legends
+are context, not new focus values. Failed leaves remain visible. A batch whose
+repair rounds are spent is salvaged rather than lost: invalid times are cleared
+and invalid points or series dropped until the same check passes.
+"""
+import copy
+import re
+from collections import defaultdict
+
+from . import ehr_tasks
+from .measurement_series import validate_series
+from .staged_timeline import evidence_ids, fits, replaced, source_window, splittable_failure
+
+TIME_FIELDS = ('time_cell_id', 'time_text', 'offset_value', 'offset_unit', 'offset_anchor_text', 'offset_basis')
+OFFSET_FIELDS = TIME_FIELDS[2:]
+POINT_ERROR = re.compile(r's(\d+)-p(\d+): ')
+SERIES_ERROR = re.compile(r's(\d+): ')
+SCHEMA_LOCATION = re.compile(r'^series\.(\d+)(?:\.points\.(\d+))?', re.M)
+
+
+def salvage_series(value, check, focus_ids=(), rounds=256):
+    """Keep what the batch's own check accepts once repair rounds are spent.
+
+    A time that fails the literal-time gates is cleared (the point keeps its value
+    with time unknown). Any other invalid point or series is dropped. Values, units
+    and ownership are never rewritten. Returns (value, actions) for the audit."""
+    value = copy.deepcopy(value)
+    if not isinstance(value, dict) or not isinstance(value.get('series'), list):
+        raise ValueError('Series salvage needs a series list')
+    actions = []
+
+    def clear(point, fields, reason):
+        actions.append({'action': 'fields_cleared', 'value_cell_id': point.get('value_cell_id'), 'reason': reason,
+                        'original': {k: point.get(k) for k in fields}})
+        point.update(dict.fromkeys(fields))
+
+    def drop_point(series, j, reason):
+        actions.append({'action': 'point_dropped', 'reason': reason, 'original': series['points'].pop(j)})
+
+    def drop_series(i, reason):
+        actions.append({'action': 'series_dropped', 'reason': reason, 'original': value['series'].pop(i)})
+
+    def points():
+        return [(s, j, p) for s in value['series'] for j, p in enumerate(s['points'])]
+
+    def handle(message):
+        series, before = value['series'], len(actions)
+        point, named = POINT_ERROR.match(message), SERIES_ERROR.match(message)
+        if point:
+            i, j = int(point.group(1)) - 1, int(point.group(2)) - 1
+            if 'nonzero offset must be printed in time_text' in message:
+                clear(series[i]['points'][j], OFFSET_FIELDS, message)
+            elif 'time_text must be literal in its time cell' in message:
+                clear(series[i]['points'][j], TIME_FIELDS, message)
+            else:
+                drop_point(series[i], j, message)
+            return True
+        if named:
+            drop_series(int(named.group(1)) - 1, message)
+            return True
+        # Point-level rules for messages that name no point: which points to clear (fields) or drop (None).
+        cell = message.rsplit(' ', 1)[-1]
+        rules = {
+            'Time offsets need a unit and a stated basis': (OFFSET_FIELDS, lambda p: p.get('offset_value') is not None
+                and not (p.get('offset_unit') and (p.get('offset_basis') or '').strip())),
+            'offset_unit without offset_value': (OFFSET_FIELDS, lambda p: p.get('offset_value') is None
+                                                 and p.get('offset_unit') is not None),
+            'unit_cell_id without unit_text': (('unit_cell_id',), lambda p: p.get('unit_text') is None),
+            'legend_cell_id without cell_status': (('legend_cell_id',), lambda p: p.get('cell_status') is None),
+            'Measurement value is outside the focus rows': (None, lambda p: p.get('value_cell_id') not in focus_ids),
+        }
+        if message.startswith('Unknown cell '):
+            for _, _, p in points():
+                if p.get('time_cell_id') == cell:
+                    clear(p, TIME_FIELDS, message)
+            rule = (None, lambda p: cell in (p.get('value_cell_id'), p.get('unit_cell_id'), p.get('legend_cell_id')))
+        elif message == 'A value cell may feed only one point':
+            cells = [p.get('value_cell_id') for _, _, p in points()]
+            duplicates = {id(p) for k, (_, _, p) in enumerate(points()) if p.get('value_cell_id') in cells[:k]}
+            rule = (None, lambda p: id(p) in duplicates)
+        else:
+            rule = rules.get(message)
+        if rule:
+            fields, matches = rule
+            hits = [(s, j, p) for s, j, p in points() if matches(p) and (fields is None or any(p.get(f) is not None for f in fields))]
+            for s, j, p in reversed(hits):
+                if fields is None:
+                    drop_point(s, j, message)
+                else:
+                    clear(p, fields, message)
+            if len(actions) > before:
+                return True
+        location = SCHEMA_LOCATION.search(message) if 'validation error' in message else None
+        if location and int(location.group(1)) < len(series):
+            i = int(location.group(1))
+            if location.group(2) is not None and int(location.group(2)) < len(series[i]['points']):
+                drop_point(series[i], int(location.group(2)), message)
+            else:
+                drop_series(i, message)
+            return True
+        # Unnamed series-level errors (ownership, patients, unknown cells): drop the
+        # first series whose removal makes this error go away.
+        for i in range(len(series)):
+            try:
+                check({**value, 'series': series[:i] + series[i+1:]})
+            except ValueError as exc:
+                if str(exc) == message:
+                    continue
+            drop_series(i, message)
+            return True
+        return False
+
+    for _ in range(rounds):
+        for i in reversed(range(len(value['series']))):
+            s = value['series'][i]
+            if not isinstance(s, dict) or not isinstance(s.get('points'), list) or not s['points'] or not all(
+                    isinstance(p, dict) for p in s['points']):
+                drop_series(i, 'series without valid points')
+        try:
+            check(value)
+            return value, actions
+        except ValueError as exc:
+            message = str(exc)
+        if not handle(message):
+            raise ValueError('Unsalvageable series error: ' + message[:500])
+    raise ValueError('Series salvage did not converge')
+
+
+def cell_groups(draft):
+    groups = defaultdict(list)
+    for cell in draft['cells']:
+        if cell['role'] in {'column_header', 'context'}:
+            continue
+        key = (cell.get('table_id'), cell.get('supplement_id'), cell.get('transcription_id'),
+               cell.get('segment_id') or cell['cell_id'].rsplit('-c', 1)[0])
+        groups[key].append(cell)
+    return list(groups.values())
+
+
+async def extract(runner, article, roster, annotation, draft, transcriptions):
+    leaves = []
+    context_cells = [c for c in draft['cells'] if c['role'] in {'column_header', 'context'}]
+    groups = cell_groups(draft)
+
+    async def batch(number, rows):
+        focus = [c for row in rows for c in row]
+        focus_ids = {c['cell_id'] for c in focus}
+        tables = {c.get('table_id') for c in focus}
+        # Include original legends and table headers. A null table context can
+        # qualify any row, so it is retained rather than guessed away.
+        context = [c for c in context_cells if c.get('table_id') is None or c.get('table_id') in tables]
+        local_draft = {**draft, 'cells': context + focus}
+        view = article
+        messages = ehr_tasks.series_messages(view, roster, local_draft)
+        if not await fits(runner, 'measurement_series_extraction', messages, 0):
+            identities = [p['identity_evidence'] for p in roster['patients']]
+            wanted = {c['segment_id'] for c in local_draft['cells'] if c.get('segment_id')}
+            wanted |= evidence_ids(identities, article['segments'])
+            # Whole narrative blocks explicitly referring to these table IDs
+            # retain ownership/legend context in addition to adjacent blocks.
+            wanted.update(s['segment_id'] for s in article['segments']
+                          if any(set(r.get('target_ids', [])) & (tables - {None})
+                                 for r in s.get('cross_references', [])))
+            view = source_window(article, wanted, {})
+            messages = ehr_tasks.series_messages(view, roster, local_draft)
+        messages[-1]['content'] += ('\nOnly the supplied rows are in scope. Headers and legends are context. '
+            'Select only supported serial measurements; series=[] is valid. Do not turn cohort rows into '
+            'patients. Missing ownership/time stays unresolved/null. Other batches cover other rows.')
+        if getattr(getattr(runner, 'config', None), 'literal_series_time_cells', False):
+            messages[-1]['content'] += (' Select the exact time_cell_id when the source supplies a time label. '
+                'The pipeline copies that cell verbatim into time_text and retains your original response; '
+                'it does not infer dates, convert units or create a time when the cell is unknown.')
+        if len(rows) > 1 and not await fits(runner, 'measurement_series_extraction', messages, 0):
+            mid = len(rows) // 2
+            await batch(number+'.0', rows[:mid]); await batch(number+'.1', rows[mid:])
+            return
+
+        projections = []
+        def check(value):
+            if getattr(getattr(runner, 'config', None), 'literal_series_time_cells', False):
+                value = copy.deepcopy(value)
+                by_id = {c['cell_id']: c for c in local_draft['cells']}
+                for series in value.get('series', []):
+                    for point in series.get('points', []):
+                        cell_id = point.get('time_cell_id')
+                        if cell_id is not None and cell_id in by_id:
+                            literal = by_id[cell_id]['raw_text']
+                            if point.get('time_text') != literal:
+                                projections.append({'time_cell_id': cell_id, 'original_time_text': point.get('time_text'),
+                                    'literal_time_text': literal, 'policy': 'selected-cell-literal-projection/1'})
+                                point['time_text'] = literal
+            checked = ehr_tasks.check_series(value, article, annotation, local_draft, transcriptions)
+            visible = {s['segment_id'] for s in view['segments']}
+            if any(e.get('segment_id') and e['segment_id'] not in visible
+                   for s in checked['series'] for e in s['ownership_evidence']):
+                raise ValueError('Ownership evidence is outside the supplied source window')
+            if any(p['value_cell_id'] not in focus_ids for s in checked['series'] for p in s['points']):
+                raise ValueError('Measurement value is outside the focus rows')
+            return checked
+
+        def salvage(value):
+            # Trial checks during salvage must not add literal-time projection records.
+            recorded = len(projections)
+            try:
+                return salvage_series(value, check, focus_ids)
+            finally:
+                del projections[recorded:]
+
+        result = await runner.call('measurement_series_extraction', messages, check,
+            {'article_id': article['article_id'], 'row_batch': number,
+             'focus_cell_ids': sorted(focus_ids), 'context_cell_ids': [c['cell_id'] for c in context],
+             'included_segment_ids': [s['segment_id'] for s in view['segments']],
+             'source_scope': 'whole_article' if view is article else 'whole_segment_window'},
+            0, view['segments'], split_on_length=len(rows) > 1, partial_builder=salvage)
+        if projections:
+            result['literal_cell_projections'] = projections
+            from .data import write_json
+            write_json(runner.output/'tasks'/(result['task_key']+'.json'), result)
+        if len(rows) > 1 and splittable_failure(result):
+            replaced(runner, result)
+            mid = len(rows) // 2
+            await batch(number+'.0', rows[:mid]); await batch(number+'.1', rows[mid:])
+            return
+        leaves.append(result)
+
+    for i in range(0, len(groups), 16):
+        await batch(str(i//16), groups[i:i+16])
+    document = ehr_tasks.check_series({'series': []}, article, annotation, draft, transcriptions)
+    for leaf in leaves:
+        # A partial leaf was salvaged and passed the same batch check.
+        if leaf['status'] not in ('valid', 'partial') or leaf.get('data') is None:
+            continue
+        for series in leaf['data']['series']:
+            series = copy.deepcopy(series)
+            sid = 's' + str(len(document['series'])+1)
+            series['series_id'] = sid
+            for i, point in enumerate(series['points'], 1):
+                point['point_id'] = f'{sid}-p{i}'
+            document['series'].append(series)
+    validate_series(document, article, annotation, transcriptions=transcriptions)
+    audit = {'policy': 'whole-row-batches/1', 'all_batches_valid': all(r['status']=='valid' for r in leaves),
+             'all_focus_cells_attempted': {c['cell_id'] for g in groups for c in g} ==
+                 {c for r in leaves for c in r['identity']['focus_cell_ids']},
+             'semantic_coverage_verified': False,
+             'batches': [{**{k: r[k] for k in ('identity', 'status', 'errors')},
+                          **({'salvage': r.get('quarantine') or []} if r['status'] == 'partial' else {})} for r in leaves]}
+    if any(r['status'] not in ('valid', 'partial') for r in leaves):
+        document['limitations'].append('Some row batches failed; successful batches retained. See coverage receipt.')
+    if any(r['status'] == 'partial' for r in leaves):
+        document['limitations'].append('Some row batches were salvaged after their repair rounds: invalid times were '
+                                       'cleared and invalid points dropped. See coverage receipt.')
+    return document, audit

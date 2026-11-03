@@ -1,0 +1,115 @@
+/* Neutral greys and one highlighter colour for evidence. Colour marks a quote or a state, never a category.
+   Every token is light-dark(): the theme follows the system until <html data-theme> names one. */
+:root {
+  color-scheme: light dark;
+  --paper: light-dark(#f6f6f5, #0f1012);
+  --card: light-dark(#ffffff, #16171a);
+  --sunk: light-dark(#efeff0, #1c1d21);
+  --ink: light-dark(#17181a, #e9eaec);
+  --ink-2: light-dark(#4a4e54, #a9adb4);
+  --ink-3: light-dark(#83878e, #73777f);
+  --rule: light-dark(#e5e6e8, #25272b);
+  --rule-strong: light-dark(#cfd1d5, #36393e);
+  --shade: light-dark(rgba(20, 22, 26, 0.08), rgba(0, 0, 0, 0.45));
+
+  /* Highlighter for pinned evidence (amber on light, blue on dark, where amber turns olive), softer under the pointer */
+  --hl: light-dark(#fbe7a1, #233a5e);
+  --hl-edge: light-dark(#d9a628, #6f9fe8);
+  --hl-soft: light-dark(#fdf3cd, #1b2638);
+  /* Quiet state colours */
+  --ok: light-dark(#2d7a57, #6cc39a);
+  --no: light-dark(#a1432f, #e08a76);
+
+  /* Reading serif first from the system (Iowan Old Style on Apple devices, Charter, Sitka, Cambria), then the web font. */
+  --serif: 'Iowan Old Style', Charter, 'Sitka Text', Cambria, 'Source Serif 4', Georgia, serif;
+  --sans: 'Inter var', Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  /* Find in article uses the other hue from evidence, so the two never look alike. */
+  --find: light-dark(rgba(96, 165, 250, 0.26), rgba(240, 190, 60, 0.24));
+  --find-now: light-dark(rgba(59, 130, 246, 0.5), rgba(240, 190, 60, 0.52));
+  --shadow-sheet: light-dark(0 0 0 1px rgba(20, 22, 26, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.06)),
+    light-dark(0 1px 2px rgba(20, 22, 26, 0.04), 0 1px 2px rgba(0, 0, 0, 0.3)),
+    light-dark(0 12px 32px -16px rgba(20, 22, 26, 0.16), 0 12px 32px -16px rgba(0, 0, 0, 0.6));
+  --shadow-card: light-dark(0 0 0 1px rgba(20, 22, 26, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.07)),
+    light-dark(0 2px 6px -2px rgba(20, 22, 26, 0.1), 0 2px 6px -2px rgba(0, 0, 0, 0.5));
+  --desk-hover: light-dark(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.05));
+  --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-io: cubic-bezier(0.65, 0, 0.35, 1);
+  --bar: 54px;
+  --radius: 8px;
+}
+:root[data-theme='light'] { color-scheme: light; }
+:root[data-theme='dark'] { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font: 14px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+#app { height: 100%; display: flex; flex-direction: column; overflow: hidden; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+input { font: inherit; color: inherit; }
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; text-decoration-color: var(--rule-strong); }
+a:hover { text-decoration-color: currentColor; }
+::selection { background: var(--hl); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+[data-input='pointer'] :focus-visible { outline: none; }
+.mono { font-family: var(--mono); }
+.muted { color: var(--ink-3); }
+.num { font-variant-numeric: tabular-nums; }
+
+/* Small uppercase labels: section names, field names, kinds */
+.label {
+  font: 600 11px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+
+/* Thin, quiet scrollbars */
+* { scrollbar-width: thin; scrollbar-color: var(--rule-strong) transparent; }
+
+/* Search fields */
+.search {
+  width: 100%; height: 36px; padding: 0 12px 0 34px; border-radius: 10px;
+  border: 1px solid var(--rule); background: var(--card) no-repeat 11px 50% / 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='7' cy='7' r='4.5' fill='none' stroke='%2383878e' stroke-width='1.5'/%3E%3Cpath d='m10.5 10.5 3 3' stroke='%2383878e' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  font-size: 13.5px; transition: border-color 160ms var(--ease), box-shadow 160ms var(--ease);
+}
+.search::placeholder { color: var(--ink-3); }
+.search:focus { outline: none; border-color: var(--rule-strong); box-shadow: 0 0 0 3px var(--sunk); }
+
+/* Evidence marks in the article */
+mark {
+  color: inherit;
+  background: var(--hl);
+  box-shadow: inset 0 -1.5px 0 var(--hl-edge);
+  border-radius: 2px;
+  padding: 1px 0;
+  transition: background-color 220ms var(--ease), box-shadow 220ms var(--ease);
+}
+mark.hover { background: var(--hl-soft); box-shadow: inset 0 -1px 0 color-mix(in oklab, var(--hl-edge) 55%, transparent); }
+
+/* The theme switch: the new theme is revealed by a circle (see theme.svelte.js), not cross-faded. */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* The sliding underline of a tab row (lib/ink.js), timed like the one under the top navigation. */
+.tab-ink { position: absolute; left: 0; bottom: -1px; height: 1.5px; border-radius: 1px; background: var(--ink); pointer-events: none; opacity: 0; }
+.tab-ink.ready { transition: transform 380ms var(--ease), width 380ms var(--ease), opacity 200ms var(--ease); }

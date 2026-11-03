@@ -1,0 +1,21 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+node_modules/
+
+# Secrets and OS files
+.env
+.DS_Store
+
+# Generated data: run folders, model weights, exported datasets, tools and logs
+.cache/
+runs/
+weights/
+hf-dataset/
+*.jar
+*.log

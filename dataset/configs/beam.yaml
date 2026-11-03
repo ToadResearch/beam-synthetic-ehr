@@ -1,0 +1,148 @@
+# Default configuration: Reflection Beam 1.0 (501B-A23B, NVFP4) with DFlash2 speculative decoding,
+# one vLLM server per 4 B200 GPUs (tensor parallel 4), 128K context, maximum reasoning effort.
+# To use another model, change serving (weights and vLLM args) and extraction (model_id, revision,
+# served_model, sampling); the pinned Beam recipe is only enforced when model_id is a Beam checkpoint.
+context: 131072
+article_timeout_seconds: 3600
+acquisition:
+  permissive_only: true
+serving:
+  image: docker://vllm/vllm-openai@sha256:25635d363e0a86a099e16690f642e85301c4940ee11acf9335c4570657db9d9d
+  gpus_per_server: 4
+  weights:
+    model:
+      repo: reflection/Beam-1.0-501B-A23B-NVFP4
+      revision: 3bd1dccf13c8f7aa3d6732c5aaa48ba107a2c086
+    draft:
+      repo: reflection/Beam-1.0-501B-A23B-DFlash2
+      revision: 163b276be744c8ce2b8385ea85de54edb3088211
+  environment:
+    OMP_NUM_THREADS: '1'
+    VLLM_WORKER_MULTIPROC_METHOD: spawn
+    VLLM_ENGINE_READY_TIMEOUT_S: '5400'
+    VLLM_BEAM_ALWAYS_CONSTRAIN_OUTPUT: '1'
+  args:
+  - '{model}'
+  - --served-model-name
+  - '{served_model}'
+  - --trust-remote-code
+  - --dtype
+  - bfloat16
+  - --host
+  - '{host}'
+  - --port
+  - '{port}'
+  - --tensor-parallel-size
+  - '4'
+  - --max-model-len
+  - '{context}'
+  - --max-num-seqs
+  - '32'
+  - --max-num-batched-tokens
+  - '32768'
+  - --gpu-memory-utilization
+  - '0.9'
+  - --kv-cache-dtype
+  - fp8
+  - --enable-chunked-prefill
+  - --enable-prefix-caching
+  - --speculative-config
+  - '{"method": "dflash", "num_speculative_tokens": 7, "attention_backend": "FLASH_ATTN", "enable_adaptive_verification":
+    true, "model": "{draft}"}'
+  - --reasoning-parser
+  - beam
+  - --generation-config
+  - vllm
+  - --chat-template
+  - '{model}/chat_template.jinja'
+  - --enable-auto-tool-choice
+  - --tool-call-parser
+  - beam
+  - --chat-template-content-format
+  - string
+  - --max-parallel-loading-workers
+  - '2'
+extraction:
+  model_id: reflection/Beam-1.0-501B-A23B-NVFP4
+  revision: 3bd1dccf13c8f7aa3d6732c5aaa48ba107a2c086
+  served_model: reflection/Beam-1.0-501B-A23B-NVFP4
+  gpus_per_endpoint: 4
+  tokenizer_contract: vllm/sha256:25635d363e0a86a099e16690f642e85301c4940ee11acf9335c4570657db9d9d
+  reasoning_strength: max
+  template_date: null
+  stop_token_ids:
+  - 151674
+  - 151675
+  temperature: 0.7
+  vision_temperature: null
+  top_p: 0.99
+  top_k: null
+  seed: 42
+  sample_seed: 42
+  max_articles: 1
+  max_patients_per_article: 48
+  max_patients: 48
+  max_figures_per_article: 48
+  max_figures: 0
+  max_calls: 8192
+  max_total_tokens: 128000000
+  max_output_tokens: 32768
+  max_retry_tokens: 32768
+  max_length_retry_tokens: 49152
+  require_full_output_budget: false
+  min_output_tokens: 16384
+  max_repair_rounds: 2
+  transport_retries: 1
+  concurrency_per_endpoint: 32
+  timeout_seconds: 1200
+  context_safety_tokens: 64
+  max_source_bytes: 64000000
+  max_article_characters: 500000
+  max_response_characters: 250000
+  max_image_bytes: 8000000
+  article_ids: null
+  robust_contracts: true
+  overnight_repairs: false
+  repair_components:
+  - series
+  summary_structured_output: false
+  task_repair_allowlist: null
+  refinement_policy: source_aware
+  image_manifest: null
+  isolate_secondary_cases: true
+  review_ordering: false
+  audit_claims: false
+  inventory_clinical_features: false
+  coverage_repair: false
+  focused_pixels: false
+  pixel_strategy: staged
+  prompt_overrides: {}
+  prompt_mode: supplement
+  timeline_completion: false
+  staged_timeline: true
+  timeline_segment_batch_size: 4
+  timeline_relation_batch_size: 2
+  timeline_bounded_context: true
+  timeline_prefer_windows: true
+  timeline_scope_repair: true
+  bounded_document_stages: true
+  timeline_sparse_relations: true
+  timeline_sparse_neighbors: 4
+  timeline_sparse_pairs_per_event: 12
+  bounded_clinical_extraction: true
+  clinical_validation_split: true
+  clinical_table_rows_per_window: 2
+  literal_series_time_cells: true
+  timeline_target_batch_size: 8
+  summary_completion: false
+  scatter_calls: false
+  experimental_pipeline: original
+  ledger_chunk_characters: 12000
+  ledger_audit: false
+  ledger_delta_timeline: true
+fhir:
+  coding:
+    max_batches: 64
+    batch_size: 4
+    concurrency: 4
+    time_budget_seconds: 600
