@@ -6,8 +6,8 @@ table cell and compiles each patient into an HL7 FHIR R4 bundle.
 
 | Folder | What it is |
 |---|---|
-| [`dataset/`](dataset/) | The builder: case reports to source-grounded FHIR R4 records with Beam (any model served by vLLM works) and the Hugging Face export |
-| [`space/`](space/) | The Hugging Face Space: read each article beside the facts Beam extracted, browse the FHIR records, build a cohort, open your own files |
+| [`dataset/`](dataset/) | The builder: case reports to source-grounded FHIR R4 records with Beam (any model served by vLLM works) and the Hugging Face export, published as [mkieffer/beam-synthetic-ehr](https://huggingface.co/datasets/mkieffer/beam-synthetic-ehr) |
+| [`space/`](space/) | The [Hugging Face Space](https://huggingface.co/spaces/mkieffer/beam-synthetic-ehr): read each article beside the facts Beam extracted, browse the FHIR records, build a cohort, open your own files |
 
 ## How the released dataset was built
 

@@ -11,7 +11,8 @@ short_description: Case reports to FHIR R4, every fact traced to its sentence
 
 # Beam Synthetic EHR
 
-A static site with two views of the `beam-synthetic-ehr` dataset (extraction by Reflection Beam):
+A static site with two views of the [beam-synthetic-ehr dataset](https://huggingface.co/datasets/mkieffer/beam-synthetic-ehr)
+(extraction by Reflection Beam; code on [GitHub](https://github.com/ToadResearch/beam-synthetic-ehr)):
 
 - **Articles**: each case report beside the facts extracted from it, tables drawn as printed.
   Selecting a fact marks the words or table cells it came from and shows Beam's reason for
